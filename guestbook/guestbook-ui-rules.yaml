@@ -1,5 +1,5 @@
 apiVersion: monitoring.googleapis.com/v1
-kind: Rules
+kind: Rule
 metadata:
   name: rule-one
   namespace: monitoring
@@ -13,7 +13,7 @@ spec:
 
 ---
 apiVersion: monitoring.googleapis.com/v1
-kind: Rules
+kind: Rule
 metadata:
   name: rule-two
   namespace: monitoring
@@ -27,7 +27,7 @@ spec:
 
 ---
 apiVersion: monitoring.googleapis.com/v1
-kind: Rules
+kind: Rule
 metadata:
   name: rule-three
   namespace: monitoring
