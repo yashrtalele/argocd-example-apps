@@ -1,0 +1,40 @@
+apiVersion: monitoring.googleapis.com/v1
+kind: Rules
+metadata:
+  name: rule-one
+  namespace: monitoring
+spec:
+  description: "This is the first rule."
+  severity: "high"
+  action: "alert"
+  conditions:
+    - condition: "cpu_usage > 80"
+      duration: "5m"
+
+---
+apiVersion: monitoring.googleapis.com/v1
+kind: Rules
+metadata:
+  name: rule-two
+  namespace: monitoring
+spec:
+  description: "This is the second rule."
+  severity: "medium"
+  action: "notify"
+  conditions:
+    - condition: "memory_usage > 70"
+      duration: "10m"
+
+---
+apiVersion: monitoring.googleapis.com/v1
+kind: Rules
+metadata:
+  name: rule-three
+  namespace: monitoring
+spec:
+  description: "This is the third rule."
+  severity: "low"
+  action: "log"
+  conditions:
+    - condition: "disk_usage > 90"
+      duration: "15m"
